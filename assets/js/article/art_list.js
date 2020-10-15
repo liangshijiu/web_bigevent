@@ -139,6 +139,13 @@ $(function () {
             })
             layer.close(index);
         });
+    })
 
+
+    // 尝试修改文章编辑按钮
+    //通过代理的形式，为编辑按钮绑定点击事件处理函数
+    $('body').on('click', '.btn_edit', function () {
+        location.href = '/article/art_edit.html?id=' + $(this).attr("data-id");
+        console.log(location.href);
     })
 })
